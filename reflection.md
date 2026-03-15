@@ -69,7 +69,6 @@ keeping it stable for the whole game.
 One habit I want to reuse is adding FIXME comments to mark exactly where 
 a bug is before trying to fix it. It kept me focused on one problem at a 
 time and gave me a clear reference point when prompting Copilot.
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 Next time I would test AI output immediately instead of assuming it is 
 correct. Copilot gave me tests that looked right but would have failed 
