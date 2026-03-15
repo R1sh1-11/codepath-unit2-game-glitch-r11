@@ -25,14 +25,28 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+The game is a number guessing game where the player tries to guess a secret 
+number within a limited number of attempts. The game gives hints after each 
+guess to guide the player toward the answer.
+
+Bugs found:
+- The hints were backwards — Too High showed "Go Higher" and Too Low showed "Go Lower"
+- The secret number changed every time Submit was clicked due to Streamlit reruns
+- Hard mode had a range of 1-50 which was easier than Normal mode's 1-100
+
+Fixes applied:
+- Flipped the hints in check_guess in logic_utils.py
+- Wrapped the secret number in session_state so it only generates once
+- Changed Hard mode range from 1-50 to 1-200
+- Removed the string conversion bug that broke comparisons on even attempts
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![Fixed winning game](winning.png)
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+## Challenge 1: Edge Case Testing
+Added 5 edge case tests covering negative numbers, decimals, very large numbers, 
+text input, and empty input. All 10 tests pass.
+![Pytest 10 tests passing](edge_testing.png)
